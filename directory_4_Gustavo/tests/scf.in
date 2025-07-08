@@ -1,0 +1,40 @@
+&control
+    calculation = 'scf'
+    prefix = 'Cu_bulk-111-surface_0'
+    restart_mode = 'from_scratch'
+    wf_collect = .false.
+    pseudo_dir = '../../KCW/PP/'
+    outdir = './out'
+    tprnfor = .true.
+    tstress = .true.
+/
+
+&system
+    ibrav = 1,
+    celldm(1) = 15.0,
+    nat = 3,
+    ntyp = 3,
+    ecutwfc = 60,
+    occupations = 'smearing',
+    smearing = 'mp',
+    degauss = 0.02,
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.7
+    conv_thr = 1.0d-10
+/
+
+ATOMIC_SPECIES
+  Cu  63.546   Cu_ONCV_PBE-1.0.upf
+  O   15.999   O_ONCV_PBE-1.0.upf
+  H    1.0079  H_ONCV_PBE-1.0.upf
+
+ATOMIC_POSITIONS angstrom
+  Cu  0.000  0.000  0.000
+  O   0.000  0.000  2.00
+  H   0.000  0.000  3.00
+
+K_POINTS automatic
+2 2 2 0 0 0

@@ -1,0 +1,8 @@
+&input
+   fildyn   = 'Cu_bulk-111-surface_0_relax_0_0_ph_9.dyn'    ! output file of ph. x for q=0
+   fld3     = 'cuoh.d3'      ! output file with third derivative
+   prefix   = 'Cu_bulk-111-surface_0'
+   outdir   = './out'
+   fildvscf = 'dvscf'        ! intermediate file (if used)
+/
+

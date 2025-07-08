@@ -1,0 +1,16 @@
+&INPUTPH
+ alpha_mix(10)=0.2
+ fildyn='Cu_bulk-111-surface_0_relax_0_0_ph_9.dyn'
+ ldisp=.true.
+ niter_ph=8
+ nmix_ph=4
+ nq1=1
+ nq2=1
+ nq3=1
+ prefix='Cu_bulk-111-surface_0'
+ recover=.false.
+ start_irr=32
+ last_irr=32
+ tr2_ph=1e-15
+ trans=.true.
+/
