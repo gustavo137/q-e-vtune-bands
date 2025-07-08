@@ -1,7 +1,8 @@
 build/
 /build_*/
 .vscode/
-
+# From macstore 
+*.DS_Store
 *~
 *.a
 *.inc
