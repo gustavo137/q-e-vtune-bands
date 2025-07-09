@@ -39,11 +39,12 @@ export MKL_NUM_THREADS=1
 ## scf.in created based on EPW/examples/sic/epw/scf.in
 ## d3hess.in comming from
 
-mkdir -p out
 
-srun --cpu_bind=cores $PW -i scf.in  > out/scf.out_${suffix}
-#srun --cpu_bind=cores $D3H -i d3hess.in    >  d3hess.out_${suffix}
-#srun --cpu_bind=cores $PH       -i ph_irr32.in   >  ph_irr32.out_${suffix}
+srun --cpu_bind=cores $PW -i scf.in > out/scf.out_${suffix}
+#srun --cpu_bind=cores $D3H -i d3hess.in > out/d3hess.out_${suffix}
+
+###
+srun --cpu_bind=cores $PH -i ph_irr32.in > out/ph_irr32.out_${suffix}
 #srun --cpu_bind=cores $PH   -nb 2     -i ph_irr32.in > ph_irr32_NB2.out_${suffix}
 
 ### Running with profiling
