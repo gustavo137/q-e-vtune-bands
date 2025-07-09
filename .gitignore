@@ -3,6 +3,8 @@ build/
 .vscode/
 # From macstore 
 *.DS_Store
+# out directory
+out/
 *~
 *.a
 *.inc
