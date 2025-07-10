@@ -15,7 +15,7 @@ module purge
 module load profile/base
 module load intel-oneapi-mpi/
 module load intel-oneapi-mkl/
-module load cmake/3.27.9  # >=3.2
+#module load cmake/3.27.9  # >=3.2
 module load intel-oneapi-compilers/2023.2.1
 
 #module load vtune 
@@ -39,13 +39,15 @@ export MKL_NUM_THREADS=1
 ## scf.in created based on EPW/examples/sic/epw/scf.in
 ## d3hess.in comming from
 
-
+### Working
 srun --cpu_bind=cores $PW -i scf.in > out/scf.out_${suffix}
+
+## I need tofix this one
 #srun --cpu_bind=cores $D3H -i d3hess.in > out/d3hess.out_${suffix}
 
-###
-srun --cpu_bind=cores $PH -i ph_irr32.in > out/ph_irr32.out_${suffix}
-#srun --cpu_bind=cores $PH   -nb 2     -i ph_irr32.in > ph_irr32_NB2.out_${suffix}
+### Working 
+#srun --cpu_bind=cores $PH -i ph_irr32.in > out/ph_irr32.out_${suffix}
+#srun --cpu_bind=cores $PH -nb 2 -i ph_irr32.in > out/ph_irr32_NB2.out_${suffix}
 
 ### Running with profiling
-#srun --cpu_bind=cores vtune -trace-mpi -collect hotspot -result-dir results_hotspot_${SLURM_JOB_ID} -- $PH -nb 2 -i ph_irr32_niter_4.in   >  ph_irr32_NB2_prof${suffix}
+srun --cpu_bind=cores vtune -trace-mpi -collect hotspot -result-dir results_hotspot_${SLURM_JOB_ID} -- $PH -nb 2 -i ph_irr32_niter_4.in > out/ph_irr32_NB2_prof${suffix}

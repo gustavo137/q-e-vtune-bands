@@ -1,6 +1,6 @@
 &INPUTPH
  alpha_mix(10)=0.2
- fildyn='Cu_bulk-111-surface_0_relax_0_0_ph_9.dyn'
+ fildyn='./out/Cu_bulk-111-surface_0_relax_0_0_ph_9.dyn'
  ldisp=.true.
  niter_ph=100
  nmix_ph=4
