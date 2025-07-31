@@ -1,7 +1,0 @@
- &INPUTPP
-   prefix = 'TiO2'
-   outdir = '/home/timrov_i/WORKSPACE/PSI/Gitlab/tmp1/q-e/tempdir/',
-   seedname = 'TiO2',
-   write_mmn  = .true.
-   write_amn  = .true.
- /

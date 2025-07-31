@@ -1,4 +1,0 @@
-&INPUT
-   prefix = 'Cu_bulk-111-surface_0'
-   outdir = './out' 
-/
