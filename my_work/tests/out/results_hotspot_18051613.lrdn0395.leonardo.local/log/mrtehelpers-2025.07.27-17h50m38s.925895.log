@@ -1,0 +1,3 @@
+274 [22504559732480] INFO mrtehelpers.mrteenv <> - Product libs directory: /leonardo/prod/spack/06/install/0.22/linux-rhel8-icelake/gcc-8.5.0/intel-oneapi-vtune-2024.1.0-6e2hsnvveq46e5z36kaygi54goqxhelh/vtune/2024.1/lib64
+274 [22504559732480] INFO mrtehelpers.mrteenv <> - File mask: amplxe_samplingmrte_clrprof*
+287 [22504559732480] INFO mrtehelpers.mrteenv <> - File name: libamplxe_samplingmrte_clrprof_1.0.so
